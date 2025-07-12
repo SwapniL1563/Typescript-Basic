@@ -39,4 +39,37 @@ const getMoreSearchProducts = <T>(products:T):T => {
     return products[index];
 }
 
-let elem = getSearchProducts<string>(["a","b","c"])
+let elem = getSearchProducts<string>(["a","b","c"]);
+
+// generic interface
+interface Box<T>{
+    value:T;
+}
+
+let val1: Box<number> = { value : 100};
+let val2: Box<string> = { value : "hello" };
+
+// generic class
+interface Course{
+    name:string,
+    type:string
+} 
+
+interface Quiz{
+    name:string,
+    level:string
+}
+
+class Sellable<T> {
+    private cart:T[] = [];
+
+    addToCart(prod: T){
+        this.cart.push(prod);
+    }
+}
+
+const store1 = new Sellable<number>();
+store1.addToCart(20);
+
+const store2 = new Sellable<string>();
+store2.addToCart("hi");
