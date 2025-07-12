@@ -15,6 +15,9 @@ function identityThree<Type>(val:Type) : Type {
     return val;
 }
 
+let value = identityThree("swap");
+let vlue1 = identityThree(3);
+
 // eg.4 
 interface Bottle {
     brand:string,
@@ -25,4 +28,15 @@ interface Bottle {
 identityThree("boy");
 identityThree(2);
 
-// generice 
+// generic in  arrays
+function getSearchProducts <T>(products: T[]):T {
+    let index = 2
+    return products[index];
+}
+
+const getMoreSearchProducts = <T>(products:T):T => {
+    let index = 1
+    return products[index];
+}
+
+let elem = getSearchProducts<string>(["a","b","c"])

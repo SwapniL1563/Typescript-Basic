@@ -14,3 +14,12 @@ function identityThree(val) {
 // identityFour<Bottle>({})
 identityThree("boy");
 identityThree(2);
+// generic in  arrays
+function getSerachProducts(products) {
+    var index = 2;
+    return products[index];
+}
+var getMoreSearchProducts = function (products) {
+    var index = 2;
+    return products[index];
+};
