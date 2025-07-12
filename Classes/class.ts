@@ -1,5 +1,6 @@
 class User {
     public name:string
+    protected _courseCount = 1; 
     email:string
     private readonly city:string = ""
     constructor(name:string,email:string){
@@ -18,5 +19,13 @@ class User1 {
     public name:string,
     public email:string){
         
+    }
+}
+
+// inheritance
+class SubUser extends User {
+    isFamily:boolean = true
+    changeCount() {
+        this._courseCount = 2;
     }
 }
