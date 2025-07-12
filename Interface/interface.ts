@@ -83,7 +83,7 @@ interface TakePhoto {
 }
 
 interface Story {
-    createStory:string
+    createStory():string
 }
 
 class Instagram implements TakePhoto , Story {
@@ -92,9 +92,10 @@ class Instagram implements TakePhoto , Story {
         public format:string,
         public _id:number,
         public quality:string,
-        public createStory:string
-    ){
+    ){ }
 
+    createStory(): string{
+      return "story created"
     }
 }
 
