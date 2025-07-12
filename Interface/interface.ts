@@ -75,6 +75,29 @@ const person: Person = {
 }
 
 
+// interface imp
+interface TakePhoto {
+    photo:string,
+    format:string,
+    _id:number
+}
+
+interface Story {
+    createStory:string
+}
+
+class Instagram implements TakePhoto , Story {
+    constructor(
+        public photo:string,
+        public format:string,
+        public _id:number,
+        public quality:string,
+        public createStory:string
+    ){
+
+    }
+}
+
 
 
 
