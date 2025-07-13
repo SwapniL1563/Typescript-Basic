@@ -50,6 +50,5 @@ function logVal(x:Date | string) {
     };
 }
 
-// discriminated union 
 
 
